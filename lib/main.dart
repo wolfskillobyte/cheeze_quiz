@@ -1,14 +1,24 @@
+import 'package:cheeze_quiz/start_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:cheeze_quiz/custom_container.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black12,
-        body: CustomContainer.purple(),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 20, 25, 57),
+                Colors.indigo
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: const StartScreen(),
+        ),
       ),
     ),
   );
 }
-
